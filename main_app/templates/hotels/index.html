@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %} {% block content %}
+
+<h1>Hotel List</h1>
+
+{% for hotel in hotels %}
+<div class="card">
+    <a href="{% url 'detail' hotel.id %}">
+  <div class="card-content">
+    <span class="card-title">{{ hotel.name }}</span>
+    <p>Location: {{ hotel.location }}</p>
+    <p>Description: {{ hotel.description }}</p>
+    {% if hotel.night > 1 %}
+    <p>Nights: {{ hotel.night }}</p>
+    {% else %}
+    <p>Nights: One night should not be enough!</p>
+    {% endif %}
+  </div>
+  </a>
+</div>
+{% endfor %} {% endblock %}
