@@ -8,7 +8,6 @@ MEALS = (
     ('D', 'Dinner')
 )
 
-
 class Hotel(models.Model):
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
@@ -39,3 +38,10 @@ class Dining(models.Model):
     
     class Meta:
         ordering = ['-date']
+
+class Photo(models.Model):
+    url = models.CharField(max_length=200)
+    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Photo for hotel_id: {self.hotel_id} @{self.url}"
