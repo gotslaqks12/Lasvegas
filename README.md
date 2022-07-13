@@ -32,9 +32,9 @@ A full Django Las Vegas Planner App with full-CRUD to update, delete, edit the i
 
 ### Future Enhancements
 
- - As a user I want to,
- - As a user I want to,
- - As a user I want to,
+ - As a user I want to update model to add more details to help people keep track better.
+ - As a user I want to update background image to details and edit page to look visibly better and professional.
+ - As a user I want to add check-in and out date of travel for more convenience for users to use. 
  
  
  ---
