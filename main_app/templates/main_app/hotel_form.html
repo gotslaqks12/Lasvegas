@@ -1,9 +1,9 @@
 
 {% extends 'base.html' %} {% block content %}
 {% if object %}
-<h1>Edit <span class="teal-text">{{object.name}}</span></h1>
+<h2>Edit <span class="teal-text">{{object.name}}</span></h2>
 {% else %}
-<h1>Add Hotel</h1>
+<h2>Add Hotel</h2>
 {% endif %}
 
 <form action="" method="post">
@@ -13,6 +13,6 @@
     
     {{ form.as_table }}
   </table>
-  <input type="submit" value="Submit!" class="btn" />
+  <input type="submit" value="Update!" class="btn blue" />
 </form>
 {% endblock %}
